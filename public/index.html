@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div id="chatbot-name">
+        <i class="fas fa-robot"></i> AI Chatbot
+    </div>
+    <div class="container">
+        <header>
+            <h1>Hello user,<span>How can I help you today?</span></h1>
+        </header>
+        <p class="instruction-text">
+            Enter your query in the search bar below to find specific information in the database. For voice search, use the microphone icon. Need a report? Click 'Generate PDF' after your search results are displayed.
+        </p>
+        <main>
+            <div class="chat-box" id="chatBox">
+                <div class="loading" id="loading"></div>
+            </div>
+        </main>
+        <div class="search-bar-container">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button id="speech-to-text" onclick="toggleSpeechRecognition()"><i class="fas fa-microphone"></i></button>
+            <button id="send-query" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            <button id="generate-pdf" onclick="generatePDF()" style="display: none;"><i class="fas fa-file-pdf"></i></button>
+        </div>
+        <footer>
+            <p>Additional Links/Info</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

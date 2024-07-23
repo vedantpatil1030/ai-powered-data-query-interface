@@ -1,0 +1,190 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e8f0fe; /* Light blue background for a bright look */
+    height: 100vh;
+    position: relative;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+  
+  .instruction-text {
+    font-size: 1.2rem; /* Slightly larger font size for emphasis */
+    color: #444; /* Medium dark gray for a softer look */
+    margin: 20px auto; /* Center align and space out from other elements */
+    text-align: center; /* Center the text */
+    max-width: 80%; /* Limit the width for readability */
+    line-height: 1.6; /* Increased line height for better readability */
+    padding: 10px; /* Padding around the text */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Subtle gradient background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White background for the header */
+    color: #333; /* Dark gray text */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #ff8a00, #e52e71);
+    -webkit-background-clip: text; /* Chrome, Safari */
+    background-clip: text; /* Standard */
+    -webkit-text-fill-color: transparent; /* Chrome, Safari */
+  }
+  
+  header h1 span {
+    display: block;
+    font-size: 1.25rem; /* Slightly smaller subtitle */
+    margin-top: 10px;
+    color: #555; /* Medium gray color for the subtitle */
+    font-weight: normal;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Enhanced shadow for subtitle */
+  }
+  
+  #chatbot-name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem; /* Font size for the chatbot name */
+    font-weight: bold;
+    color: #fff; /* White text */
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* Bright blue gradient background */
+    padding: 15px 25px;
+    border-radius: 50px; /* Rounded shape */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 1px; /* Spacing between letters */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and text */
+  }
+  
+  #chatbot-name i {
+    font-size: 1.8rem; /* Size of the icon */
+    color: #fff; /* Icon color to match the text */
+  }
+  
+  .search-bar-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%; /* Adjust width for a balanced look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between items */
+    padding: 10px;
+    background-color: #ffffff; /* White background for search bar container */
+    border-radius: 6px;
+    border: 1px solid #ddd; /* Light gray border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 150px); /* Adjusted to fit with buttons */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333; /* Dark gray text for readability */
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    display: none; /* Hide buttons initially except for speech-to-text */
+    font-size: 16px;
+  }
+  
+  button#send-query {
+    background-color: #ff5722; /* Bright orange for the send button */
+  }
+  
+  button#speech-to-text {
+    background-color: #00bcd4; /* Bright cyan for the speak button */
+    display: inline-block; /* Always display the speech-to-text button */
+  }
+  
+  button#generate-pdf {
+    background-color: #4caf50; /* Bright green for the generate PDF button */
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666; /* Darker gray for footer text */
+  }
+  .chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #666;
+    background-color: #ffffff; /* White background for the chat box */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between messages */
+}
+
+.user-message, .bot-message {
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word; /* Ensure long words wrap */
+}
+
+.user-message {
+    background-color: #d4edda; /* Light green background for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.bot-message {
+    background-color: #e2e3e5; /* Light gray background for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+/* Adjust the search bar container width if needed */
+.search-bar-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Existing styles here... */
+
+button#generate-pdf {
+    background-color: #4caf50; /* Bright green for the generate PDF button */
+    display: none; /* Initially hidden */
+}
