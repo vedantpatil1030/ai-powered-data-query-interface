@@ -28,9 +28,9 @@ Goals:
 
 4. Installation and Setup
 1. Clone the Repository
-
+    git clone https://github.com/vedantpatil1030/ai-powered-data-query-interface.git
 2. Navigate to the Project Directory
-
+    cd ai-powered-data-query-interface
 3. Install Dependencies
 npm install
 4.Set Up Environment Variables
